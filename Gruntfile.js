@@ -62,7 +62,7 @@ module.exports = function(grunt){
           ext: '.debug.html'
         }]
       },
-      desktop: {
+      uber: {
         options: {
           pretty: false,
           data: {
@@ -78,7 +78,22 @@ module.exports = function(grunt){
           ext: '.16.html'
         }]
       },
-
+      meh: {
+        options: {
+          pretty: false,
+          data: {
+            'dotmin': '.min',
+            'mirrorCount': '4'
+          }
+        },
+        files: [{
+          expand: true,
+          cwd: 'build',
+          src: [ '**/*.jade', '!**/layout*' ],
+          dest: 'build',
+          ext: '.4.html'
+        }]
+      },
       production: {
         options: {
           pretty: false,
