@@ -50,7 +50,8 @@ module.exports = function(grunt){
         options: {
           pretty: true,
           data: {
-            'dotmin': ''
+            'dotmin': '',
+            'mirrorCount': '8'
           }
         },
         files: [{
@@ -61,11 +62,29 @@ module.exports = function(grunt){
           ext: '.debug.html'
         }]
       },
+      desktop: {
+        options: {
+          pretty: false,
+          data: {
+            'dotmin': '',
+            'mirrorCount': '32'
+          }
+        },
+        files: [{
+          expand: true,
+          cwd: 'build',
+          src: [ '**/*.jade' ],
+          dest: 'build',
+          ext: '.32.html'
+        }]
+      },
+
       production: {
         options: {
           pretty: false,
           data: {
-            'dotmin': '.min'
+            'dotmin': '.min',
+            'mirrorCount': '8'
           }
         },
         files: [{
@@ -105,7 +124,7 @@ module.exports = function(grunt){
     connect: {
       server: {
         options: {
-          base: 'dist/'
+          base: './'
         }
       }
     },
@@ -119,10 +138,13 @@ module.exports = function(grunt){
             bgColor: 'red'
           }
         },
-        files: {
-          'build/css/index.css': 'src/css/index.less',
-          'build/css/logo.css': 'src/css/logo.less'
-        }
+        files: [{
+          expand: true,
+          cwd: 'src/css',
+          src: ['*.less'],
+          dest: 'build/css/',
+          ext: '.css'
+        }]
       }
     },
     jshint: {

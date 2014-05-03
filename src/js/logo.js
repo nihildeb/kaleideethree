@@ -8,7 +8,7 @@ window.addEventListener('resize', function () {
 var wid = parseInt(d3.select('body').style('width'), 10),
     hei = parseInt(d3.select('body').style('height'), 10),
     shortest = Math.min(wid, hei),
-    tiles = 8,
+    tiles = parseInt(d3.select('#mirrors').attr('mirrorCount'), 10),
     w = Math.floor(shortest / tiles),
     h = Math.floor(shortest / tiles),
     wCount = Math.floor(wid/w),
