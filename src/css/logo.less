@@ -1,0 +1,53 @@
+@import "bootstrap/normalize.less";
+
+@background: #000;
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: @background;
+}
+
+@container-size: 60*11;
+
+#container {
+  /*width: unit(@container-size, px);*/
+  /*height: unit(@container-size, px);*/
+  margin: auto;
+  /*width: 100%; */
+  /*height: 100%; */
+}
+
+#vis, .clone {
+  display: none;
+  float: left;
+  /*width: 120px;*/
+  /*height: 120px;*/
+  /*background: #000;*/
+}
+
+.mirror {
+  display: inline-block;
+  float: left;
+  /*width: 60px; //120px;*/
+  /*height: 60px; //120px;*/
+  background: transparent;
+}
+
+
+.mirrorX {
+  display:block;
+  transform: scaleX(-1);
+  /*background: red;*/
+}
+
+.mirrorY {
+  display:block;
+  transform: scaleY(-1);
+  /*background:yellow;*/
+}
+
+.mirrorXY {
+  display: block;
+  transform: scale(-1, -1);
+}
