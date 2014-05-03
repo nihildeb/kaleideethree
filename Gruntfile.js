@@ -19,7 +19,7 @@ module.exports = function(grunt){
         src: [ 'build' ]
       },
       dist: {
-        src: ['dist']
+        src: ['dist/**/*debug*']
       }
     },
     autoprefixer: {
@@ -57,7 +57,7 @@ module.exports = function(grunt){
         files: [{
           expand: true,
           cwd: 'build',
-          src: [ '**/*.jade' ],
+          src: [ '**/*.jade', '!**/layout*' ],
           dest: 'build',
           ext: '.debug.html'
         }]
@@ -73,7 +73,7 @@ module.exports = function(grunt){
         files: [{
           expand: true,
           cwd: 'build',
-          src: [ '**/*.jade' ],
+          src: [ '**/*.jade', '!**/layout*' ],
           dest: 'build',
           ext: '.32.html'
         }]
@@ -90,7 +90,7 @@ module.exports = function(grunt){
         files: [{
           expand: true,
           cwd: 'build',
-          src: [ '**/*.jade' ],
+          src: [ '**/*.jade', '!**/layout*' ],
           dest: 'build',
           ext: '.html'
         }]
