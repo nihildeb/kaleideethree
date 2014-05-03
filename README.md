@@ -3,4 +3,4 @@ kaleideethree
 
 D3 Kaleidoscopes
 
-[http://nihildeb.github.io/kaleideethree]
+http://nihildeb.github.io/kaleideethree
