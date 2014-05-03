@@ -67,7 +67,7 @@ module.exports = function(grunt){
           pretty: false,
           data: {
             'dotmin': '',
-            'mirrorCount': '32'
+            'mirrorCount': '16'
           }
         },
         files: [{
@@ -75,7 +75,7 @@ module.exports = function(grunt){
           cwd: 'build',
           src: [ '**/*.jade', '!**/layout*' ],
           dest: 'build',
-          ext: '.32.html'
+          ext: '.16.html'
         }]
       },
 
